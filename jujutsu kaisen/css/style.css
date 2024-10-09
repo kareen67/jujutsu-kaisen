@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.encabezado{
+    background: #242526;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+}
+
+nav .wrapper {
+    /* position: relative;
+    max-width: 1300px; */
+    padding: 0px 30px;
+    height: 70px;
+    line-height: 70px;
+    /* margin-top: 0px; */
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+
+.logo{
+    transition: all 1s ease-in-out;
+    height: 60px;
+    /* margin-top: 30px; */
+     padding: 0px 10px; 
+ 
+  }
+ 
+  .logo:hover{
+     transform: scale(1.2);
+  }
+ 
+
+.wrapper .nav-links {
+    display: inline-flex;
+    margin-top: 15px;
+    
+
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background: #3A3B3C;
+}
+
+.nav-links .mobile-item {
+    display: none;
+}
+
+.nav-links .drop-menu {
+    position: absolute;
+    background: #242526;
+    width: 180px;
+    line-height: 45px;
+    top: 85px;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-links li:hover .drop-menu,
+.nav-links li:hover {
+    transition: all 0.3s ease;
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.drop-menu li a {
+    width: 100%;
+    display: block;
+    padding: 0 0 0 15px;
+    font-weight: 400;
+    border-radius: 0px;
+}
+
+.wrapper .btn {
+    color: #917bf4;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+
+}
+
+.wrapper .btn.close-btn {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+
+@media screen and (max-width: 970px) {
+    .wrapper .btn {
+        display: block;
+    }
+
+    .wrapper .nav-links {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 350px;
+        top: 0;
+        left: -100%;
+        background: #242526;
+        display: block;
+        padding: 50px 10px;
+        line-height: 50px;
+        overflow-y: auto;
+        box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+        transition: all 0.3s ease;
+    }
+
+    /* custom scroll bar */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #242526;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #3A3B3C;
+    }
+
+    #menu-btn:checked~.nav-links {
+        left: 0%;
+    }
+
+    #menu-btn:checked~.btn.menu-btn {
+        display: none;
+    }
+
+    #close-btn:checked~.btn.menu-btn {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 15px 10px;
+    }
+
+    .nav-links li a {
+        padding: 0 20px;
+        display: block;
+        font-size: 20px;
+    }
+
+    .nav-links .drop-menu {
+        position: static;
+        opacity: 1;
+        top: 65px;
+        visibility: visible;
+        padding-left: 20px;
+        width: 100%;
+        max-height: 0px;
+        overflow: hidden;
+        box-shadow: none;
+        transition: all 0.3s ease;
+    }
+
+    #showDrop:checked~.drop-menu,
+    #showMega:checked~.mega-box {
+        max-height: 100%;
+    }
+
+    .nav-links .desktop-item {
+        display: none;
+    }
+
+    .nav-links .mobile-item {
+        display: block;
+        color: #f2f2f2;
+        font-size: 20px;
+        font-weight: 500;
+        padding-left: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links .mobile-item:hover {
+        background: #3A3B3C;
+    }
+
+    .drop-menu li {
+        margin: 0;
+    }
+
+    .drop-menu li a {
+        border-radius: 5px;
+        font-size: 18px;
+    }
+}
+nav input {
+    display: none;
+}
+
+.body-text {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.body-text div {
+    font-size: 45px;
+    font-weight: 600;
+}
+
+
+
+/* CARRUCEL  */
+.carrucel-inner img{
+    height: 70vh;
+    width: 100%;
+}
+
+/* DESCRIPCION DEL ANIMEEE */
+
+
+.tarjeta-descripcion{
+    width: 1500px;
+    height: 450px;
+    background-color: rgb(45, 41, 55);
+    display: flex;
+    justify-content: space-between;
+    margin: 12px auto;
+    border-radius: 20px;
+
+}
+.personaje h1{
+    text-align: center;
+    color: rgb(74, 22, 22);
+    font-size: 40px;
+}
+
+.personaje p{
+    margin-left: 30px;
+    line-height: 38px;
+    font-size: 29px;
+    color: #ffffff;
+}
+
+#btn{
+    margin-top: 18px;
+    width: 70%;
+    border-radius: 10px;
+    height: 35px;
+    background: #632440;
+    color: white;
+    border: 2px dotted rgb(1, 1, 1);
+}
+
+.anim{
+    opacity: 0;
+    transform: translateY(150px);
+    animation: luu 1s linear forwards;
+}
+.animimg{
+    width: 1300px;
+    height: -930px;
+
+    opacity: 0;
+    transform: translateX(250px);
+    animation: isaa 1s linear forwards;
+}
+
+@keyframes luu {
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes isaa {
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+/* CUERPOOOOOOOOOOOOOOO index */
+
+main .cuerpo {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+
+}
+
+/* TARJETAS PJ */
+
+.caja{
+    display: flex;
+    justify-content: space-between;
+    height: 570px;
+    
+}
+
+.card {
+    /* ancho */
+    width:350px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  
+  }
+  
+  .pj {
+    height:95%;
+    width: 95%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+    border-radius: 20px;
+  }
+  
+  .textBox {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.2s ease-in-out;
+    z-index: 2;
+  }
+  
+
+  .textBox > .text {
+    font-weight: bold;
+  }
+  
+  .textBox > .head {
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+  .textBox > .price {
+    font-size: 17px;
+  }
+  
+  .textBox > span {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .card:hover > .textBox {
+    opacity: 1;
+  }
+  
+  .card:hover > .img {
+    height: 90%;
+    filter: blur(7px);
+    animation: anim 3s infinite;
+  }
+  
+  @keyframes anim {
+    0% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-20px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .card:hover {
+    transform: scale(1) rotate(-1deg);
+  }
+  
+
+
+
+
+.footer-distribuido {
+    background: #666;
+    padding: 5px px;
+    width: 100%;
+    text-align: left;
+}
+
+
+
+.footer-izquierda {
+    margin-left: 10px;
+    width: 40%;
+}
+
+
+
+.footer-distribuido h3 {
+    color: #ffffff;
+    font-size: 36px;
+}
+
+.footer-distribuido h3 span {
+    color: rgb(85, 20, 20);
+}
+
+
+
+
+
+/* GALERIAAAA */
+.cuerpo {
+    display: flex;
+    justify-content: center;
+    background-color: #302424;
+    /* align-items: center; */
+    /* padding: 100px; */
+    
+}
+
+.grid-imagenes {
+    margin-top: 90px;
+    margin-left: 10px;
+    margin-right: 15px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(9, 1fr); /* Seis columnas de tamaño igual */
+    grid-auto-rows: auto; /* Altura base para filas */
+    /* width: 1000%;
+    max-width: 1200px; */
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.imagen img:hover {
+    transform: scale(1.05);
+}
+
+/* Tamaños específicos para las imágenes */
+.grande {
+    grid-column: span 3; /* Ocupa 3 columnas */
+    grid-row: span 2;    /* Ocupa 2 filas */
+}
+
+.mediana {
+    grid-column: span 3; /* Ocupa 2 columnas */
+    grid-row: span 2;    /* Ocupa 1 fila */
+}
+
+.pequeña {
+    grid-column: span 3; /* Ocupa 1 columna */
+    grid-row: span 1;    /* Ocupa 1 fila */
+}
+
